@@ -6,8 +6,12 @@ let sceltaUtente = prompt("Scegli pari o dispari:");
 /* chiedo all'utente di inserire un numero da 1 a 5 */
 let numeroUtente = Number(prompt("Inserisci un numero da 1 a 5:"));
 
-/* genero un numero casuale per il computer da 1 a 5 */
-let numeroComputer = Math.floor(Math.random() * 5) + 1;
+/* funzione per numero casuale */
+function numeroRandomico(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+let numeroComputer = numeroRandomico(1,5);
 
 /* sommo i due numeri */
 let somma = numeroUtente + numeroComputer;
